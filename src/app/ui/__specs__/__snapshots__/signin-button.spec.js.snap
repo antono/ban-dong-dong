@@ -1,0 +1,14 @@
+exports[`SigninButton matches snapshot 1`] = `
+<FlatButton
+  disabled={false}
+  label="Sign In"
+  labelPosition="after"
+  labelStyle={Object {}}
+  onKeyboardFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onTouchStart={[Function]}
+  onTouchTap={[Function]}
+  primary={false}
+  secondary={false} />
+`;

@@ -1,0 +1,28 @@
+exports[`Drawer matches snapshot 1`] = `
+<Drawer
+  disableSwipeToOpen={false}
+  docked={false}
+  onRequestChange={[Function]}
+  open={false}
+  openSecondary={false}
+  swipeAreaWidth={30}
+  width={null}
+  zDepth={2}>
+  <MenuItem
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}>
+    Welcome
+  </MenuItem>
+  <MenuItem
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}>
+    Sign In
+  </MenuItem>
+</Drawer>
+`;

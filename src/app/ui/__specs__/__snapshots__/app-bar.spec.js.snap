@@ -1,0 +1,8 @@
+exports[`AppBar matches snapshot 1`] = `
+<AppBar
+  iconElementRight={<Connect(UserMenu) />}
+  onLeftIconButtonTouchTap={[Function]}
+  showMenuIconButton={true}
+  title="Hello World"
+  zDepth={1} />
+`;
