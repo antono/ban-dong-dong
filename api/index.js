@@ -3,18 +3,10 @@ const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const googleOauthConfig = require('../config/google-oauth');
 const { secret: sessionSecret } = require('../config/session-secret');
 const debug = require('debug')('dong:api');
 
-const { OAuth2Strategy: GoogleStrategy } = require('passport-google-oauth');
-
-passport.use(new GoogleStrategy(googleOauthConfig,
-  (accessToken, refreshToken, profile, cb) => {
-    debug(profile);
-    return cb(null, { id: 1 });
-  }
-));
+const authGoogle = require('./auth/google');
 
 passport.serializeUser((user, done) => {
   done(null, user);
@@ -36,17 +28,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/auth/google', passport.authenticate('google', {
-  scope: ['profile', 'email']
-}));
-
-app.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/login' }),
-  (req, res) => {
-    res.redirect('/');
-  }
-);
+app.use('/auth/google', authGoogle.createRouter(passport));
 
 app.listen(3003, () => {
-  console.log('Example app listening on port 3003!');
+  debug('Example app listening on port 3003!');
 });
