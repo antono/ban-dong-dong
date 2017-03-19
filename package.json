@@ -5,6 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors",
+    "start-api": "DEBUG='*' nodemon api",
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
@@ -29,6 +30,7 @@
     "jest": "^18.1.0",
     "jest-enzyme": "^2.1.2",
     "nock": "^9.0.6",
+    "nodemon": "^1.11.0",
     "react-addons-test-utils": "^15.4.2",
     "react-test-renderer": "^15.4.2",
     "redux-devtools": "^3.3.2",
