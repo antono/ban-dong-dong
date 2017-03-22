@@ -1,6 +1,6 @@
 # 半东东 - bàn dōng dōng - полуфабрикат
 
-Simple project scaffold based on webpack react, redux, material ui, jest.
+Simple project template based on webpack react, redux, material ui, jest.
 
 ## Quickstart
 
